@@ -3,48 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas Argentinas</title>
+    <title>Pilotos F1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <!-- Para filtros y navegacion -->
-    </header>
 
-    <main class="comida-container" id="comidaContainer">
-        <!-- Contenido Dinamico -->
-    </main>    
+    <h1>Pilotos de Fórmula 1</h1>
 
-<section class="addfood">
-  <h2> Agregar nueva comida</h2>
-  
+    <input type="text" id="buscador" placeholder="Buscar por nombre o equipo">
 
+    <select id="filtrarEquipo">
+        <option value="">Todos los equipos</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Red Bull">Red Bull</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="McLaren">McLaren</option>
+        <option value="Aston Martin">Aston Martin</option>
+    </select>
 
+    <main class="piloto-container" id="pilotoContainer">
+    </main>
 
-<input type="text" id="buscador" placeholder="Buscar por nombre de provicnica o categoria">
-
-<select id = "filtrarCategoria">
-  <option value=" "> Todas las categorías</option>
-  <option value="Parilla"> Parilla</option>
-  <option value=" Horno"> Horno</option>
-  <option value="Guiso"> Guiso</option>
-  <option value=" Frito"> Frito</option>
-  </select>
-
-
-
-<select id = "filtrarProvincia">
-  <option value=" "> Todas las provincias</option>
-  <option value="Buenos Aires"> Buenos Aires</option>
-  <option value=" Córdoba"> Córdoba</option>
-  <option value="Entre Ríos"> Entre Ríos</option>
-  <option value=" Jujuy"> Jujuy</option>
-  <option value="Salta"> Salta</option>
-  <option value=" Santa Fe"> Santa Fe</option>
-  <option value="Tucumán"> Tucumán</option>
-  </select>
-
-
-  <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
