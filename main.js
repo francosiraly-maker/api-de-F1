@@ -11,7 +11,7 @@ fetch('https://api.openf1.org/v1/drivers?session_key=latest')
 
     pilotos = data.map(driver => ({
       nombre: driver.full_name || "Sin Nombre",
-      equipo: driver.team_name || "Sin Equipo",
+      equipo: driver.team_name || "Sin Equipo ",
       numero: driver.driver_number || "N/A",
       pais: driver.country_code || "N/A"
     }));
