@@ -5,9 +5,9 @@ fetch('https://api.openf1.org/v1/drivers?session_key=latest')
     console.log('Pilotos cargados desde la API:');
     console.log(data);
 
-    const pilotoContainer = document.getElementById('pilotoContainer');
+    pilotoContainer = document.getElementById('pilotoContainer');
 
-    let pilotos = [];
+    pilotos = [];
 
     pilotos = data.map(driver => ({
       nombre: driver.full_name || "Sin Nombre",
@@ -21,7 +21,7 @@ fetch('https://api.openf1.org/v1/drivers?session_key=latest')
   .catch(error => {
     console.error('Error al leer la API:', error);
   });
-
+let pilotoContainer, pilotos = [];
 function mostrarPilotosConForEach(lista = pilotos) {
   pilotoContainer.innerHTML = "";
   lista.forEach(piloto => {
@@ -38,7 +38,6 @@ function mostrarPilotosConForEach(lista = pilotos) {
 
 const buscador = document.getElementById('buscador');
 const filtroEquipo = document.getElementById('filtrarEquipo');
-
 
 function filtrar() {
   const eq = filtroEquipo.value.trim().toLowerCase();
